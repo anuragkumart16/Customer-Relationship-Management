@@ -1,0 +1,3 @@
+# this ensures that no unnecessary files get pushed to  repo
+venv
+env

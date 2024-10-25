@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'accounts',
 
     'widget_tweaks',
+    'django_filters',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,16 +79,26 @@ WSGI_APPLICATION = 'crm.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+
+# this code is for sqlite
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'crm',
-		'USER': 'root',
-		'PASSWORD': 'Ash123',
-		'HOST':'localhost',
-		'PORT':'3306',
-	}
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
 }
+
+# this code is for mysql
+# DATABASES = {
+# 	'default': {
+# 		'ENGINE': 'django.db.backends.mysql',
+# 		'NAME': 'crm',
+# 		'USER': 'root',
+# 		'PASSWORD': 'Ash123',
+# 		'HOST':'localhost',
+# 		'PORT':'3306',
+# 	}
+# }
 
 
 
